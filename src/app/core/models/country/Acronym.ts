@@ -1,0 +1,15 @@
+export enum Acronym {
+  Al = 'AL',
+  Asean = 'ASEAN',
+  Au = 'AU',
+  Cais = 'CAIS',
+  Caricom = 'CARICOM',
+  Cefta = 'CEFTA',
+  Eeu = 'EEU',
+  Efta = 'EFTA',
+  Eu = 'EU',
+  Nafta = 'NAFTA',
+  Pa = 'PA',
+  Saarc = 'SAARC',
+  Usan = 'USAN',
+}

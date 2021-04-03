@@ -1,0 +1,15 @@
+export enum Name {
+  AfricanUnion = 'African Union',
+  ArabLeague = 'Arab League',
+  AssociationOfSoutheastAsianNations = 'Association of Southeast Asian Nations',
+  CaribbeanCommunity = 'Caribbean Community',
+  CentralAmericanIntegrationSystem = 'Central American Integration System',
+  CentralEuropeanFreeTradeAgreement = 'Central European Free Trade Agreement',
+  EurasianEconomicUnion = 'Eurasian Economic Union',
+  EuropeanFreeTradeAssociation = 'European Free Trade Association',
+  EuropeanUnion = 'European Union',
+  NorthAmericanFreeTradeAgreement = 'North American Free Trade Agreement',
+  PacificAlliance = 'Pacific Alliance',
+  SouthAsianAssociationForRegionalCooperation = 'South Asian Association for Regional Cooperation',
+  UnionOfSouthAmericanNations = 'Union of South American Nations',
+}

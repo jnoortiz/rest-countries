@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  countriesApiUrl: 'https://restcountries.eu/rest/v2',
 };
 
 /*
