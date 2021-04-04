@@ -1,1 +1,79 @@
-<p>country-details works!</p>
+<!-- header -->
+<app-header></app-header>
+
+<div class="container">
+  <!-- back button -->
+  <button class="btn back-button" [routerLink]="['/countries']">
+    <i class="back-button-icon icon-left"></i>Back
+  </button>
+
+  <!-- country flag -->
+  <div class="country-flag">
+    <img class="country-flag-img" [src]="country?.flag" />
+  </div>
+
+
+
+  <!-- country details -->
+  <div class="country-details">
+    <!-- country title -->
+    <h1 class="country-name">{{ country?.name }}</h1>
+
+
+    <div class="country-details-column">
+      <div>
+        <label>Native Name:</label>
+        <span>{{ country?.nativeName }}</span>
+      </div>
+      <div>
+        <label>Population:</label>
+        <span>{{ country?.population | number }}</span>
+      </div>
+      <div>
+        <label>Region:</label>
+        <span>{{ country?.region }}</span>
+      </div>
+      <div>
+        <label>Sub Region:</label>
+        <span>{{ country?.subregion }}</span>
+      </div>
+      <div>
+        <label>Capital:</label>
+        <span>{{ country?.capital }}</span>
+      </div>
+    </div>
+
+    <div class="country-details-column">
+      <div>
+        <label>Top Level Domain:</label>
+        <span>{{ country?.topLevelDomain | join }}</span>
+      </div>
+      <div>
+        <label>Currencies:</label>
+        <span>{{ country?.currencies | nameObjJoin }}</span>
+      </div>
+      <div>
+        <label>Languages:</label>
+        <span>{{ country?.languages | nameObjJoin }}</span>
+      </div>
+    </div>
+
+    <div class="border-button-column">
+      <div>
+        <label class="border-countries-label">Border Countries:</label>
+        <button
+          class="btn border-button"
+          *ngFor="let borderCountry of borderCountries"
+          [routerLink]="['/countries', borderCountry.countryCode]"
+        >
+          <span *ngIf="borderCountry.getCountryName | async as countryName; else loading">
+            {{ countryName }}
+          </span>
+          <ng-template #loading>
+            <span class="border-button loading-text"> loading... </span>
+          </ng-template>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

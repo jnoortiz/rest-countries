@@ -1,3 +1,5 @@
+@import 'partials/_breakpoints';
+
 .country-list {
   text-align: center;
   list-style: none;
@@ -7,5 +9,12 @@
 
 .country-card-container {
   display: inline-block;
-  margin: 30px;
+  margin: 15px;
+}
+
+@media (min-width: $s) {
+      .country-card-container {
+    display: inline-block;
+    margin: 30px;
+  }
 }

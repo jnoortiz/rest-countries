@@ -1,4 +1,4 @@
-<div class="country-card">
+<div class="country-card" [routerLink]="['/countries', country.alpha2Code]">
   <div class="country-flag">
     <img class="country-flag-img" [src]="country.flag" />
   </div>
@@ -6,7 +6,7 @@
     <h3 class="country-name">{{ country.name }}</h3>
     <div>
       <label>Population:</label>
-      <span>{{ country.population }}</span>
+      <span>{{ country.population | number }}</span>
     </div>
     <div>
       <label>Region:</label>

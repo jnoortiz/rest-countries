@@ -1,0 +1,94 @@
+@import 'partials/_breakpoints';
+@import 'partials/_colors';
+@import 'partials/_variables';
+
+.btn {
+  box-shadow: $boxShadow;
+  font-size: $countryDetailsFontSize;
+  background-color: $white;
+  border: none;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.back-button {
+  display: block;
+  margin-right: 5px;
+  margin-bottom: 50px;
+}
+
+.country-flag {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.country-flag-img {
+  height: auto;
+  width: 100%;
+}
+
+.country-details {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.country-details-column {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 40px;
+}
+
+.border-button-column {
+  width: 100%;
+}
+
+.border-button {
+  display: inline-block;
+  margin: 0 0 5px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.border-button-loading-text {
+  font-style: italic;
+  opacity: 50%;
+}
+
+.border-countries-label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $s) {
+  .country-details-column {
+    width: 50%;
+  }
+}
+
+@media (min-width: $l) {
+  .country-flag {
+    width: 50%;
+    padding-right: 50px;
+  }
+
+  .country-details-column {
+    width: 50%;
+  }
+
+  .country-details {
+    width: 50%;
+    padding: 40px;
+  }
+
+  .border-countries-label {
+    display: inline-block;
+  }
+}

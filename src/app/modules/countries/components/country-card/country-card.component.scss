@@ -7,7 +7,7 @@
   max-width: 290px;
   overflow: hidden;
   box-shadow: $boxShadow;
-  font-size: 14px;
+  font-size: $countryListFontSize;
   cursor: pointer;
 }
 
@@ -30,4 +30,8 @@
 
 .country-name {
   margin-top: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
 }

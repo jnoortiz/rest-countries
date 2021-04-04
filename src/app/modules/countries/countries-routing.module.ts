@@ -9,7 +9,7 @@ const routes: Routes = [
     component: CountryListComponent,
   },
   {
-    path: ':id',
+    path: ':countryCode',
     component: CountryDetailsComponent,
   },
 ];
