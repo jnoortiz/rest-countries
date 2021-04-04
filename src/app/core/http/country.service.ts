@@ -11,9 +11,7 @@ export class CountryService {
   constructor(private http: HttpClient) {}
 
   getCountryByCode(code: string): Observable<Country> {
-    return this.http.get(
-      `${environment.countriesApiUrl}/alpha/${code}`
-    ) as Observable<Country>;
+    return this.http.get(`${environment.countriesApiUrl}/alpha/${code}`) as Observable<Country>;
   }
 
   getCountryList(): Observable<Country[]> {
