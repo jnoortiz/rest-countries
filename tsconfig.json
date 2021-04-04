@@ -7,7 +7,7 @@
       "@environments/*": ["environments/*"],
       "@modules/*": ["app/modules/*"],
       "@shared/*": ["app/shared/*"],
-      "@scss/*": ["assets/scss/*"],
+      "@assets/*": ["assets/*"],
       "@core/*": ["app/core/*"]
     },
     "outDir": "./dist/out-tsc",

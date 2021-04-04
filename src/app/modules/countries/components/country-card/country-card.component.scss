@@ -1,10 +1,31 @@
+@import 'partials/_variables';
+
 .country-card {
-  height: 50px;
-  width: 100px;
-  border-radius: 5px;
+  border-radius: 8px;
+  background-color: white;
+  max-width: 290px;
+  overflow: hidden;
+  box-shadow: $boxShadow;
+  font-size: 14px;
 }
 
 .country-flag {
+  height: 200px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.country-flag-img {
+  height: 100%;
   width: 100%;
-  height: auto;
+  object-fit: cover;
+}
+
+.country-card-content {
+  padding: 20px 20px 40px;
+  text-align: left;
+}
+
+.country-name {
+  margin-top: 0;
 }

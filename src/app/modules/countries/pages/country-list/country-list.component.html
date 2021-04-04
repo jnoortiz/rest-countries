@@ -1,15 +1,15 @@
 <!-- header -->
 <app-header></app-header>
 
-<!-- country search bar -->
-<div class="country-search-bar"></div>
+<!-- country name filter -->
+<div class="country-name-filter"></div>
 
 <!-- region filter -->
 <div class="region-filter"></div>
 
 <!-- country cards -->
-<div class="country-list" *ngFor="let country of countryList">
-  <div class="country-card-container">
+<ul class="country-list">
+  <li class="country-card-container" *ngFor="let country of countryList">
     <app-country-card [country]="country"></app-country-card>
-  </div>
-</div>
+  </li>
+</ul>
