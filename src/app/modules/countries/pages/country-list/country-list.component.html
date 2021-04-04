@@ -1,1 +1,15 @@
-<p>country-list works!</p>
+<!-- header -->
+<app-header></app-header>
+
+<!-- country search bar -->
+<div class="country-search-bar"></div>
+
+<!-- region filter -->
+<div class="region-filter"></div>
+
+<!-- country cards -->
+<div class="country-list" *ngFor="let country of countryList">
+  <div class="country-card-container">
+    <app-country-card [country]="country"></app-country-card>
+  </div>
+</div>
