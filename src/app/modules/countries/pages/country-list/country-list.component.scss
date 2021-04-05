@@ -18,7 +18,9 @@
   position: relative;
   height: 50px;
   display: inline-block;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
 }
 
 .country-name-input-filter {
@@ -28,6 +30,7 @@
   box-shadow: $boxShadow;
   width: 100%;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .country-name-filter-icon {
@@ -39,7 +42,7 @@
 }
 
 .region-filter {
-  float: right;
+  margin-bottom: 40px
 }
 
 :host ::ng-deep {
@@ -47,7 +50,7 @@
     .ng-select-container {
       height: 48px;
       width: 220px;
-      border: 0;
+      border: none;
       box-shadow: $boxShadow;
       padding-left: 10px;
     }
@@ -60,9 +63,18 @@
   }
 }
 
-@media (min-width: $s) {
+@media (min-width: $md) {
+  .country-name-filter {
+    margin-bottom: 0px;
+  }
+
   .country-card-container {
     display: inline-block;
     margin: 30px;
+  }
+
+  .region-filter {
+    float: right;
+    margin-bottom: 0px;
   }
 }
