@@ -61,7 +61,7 @@
         <button
           class="btn border-button"
           *ngFor="let borderCountry of borderCountries"
-          [routerLink]="['/countries', borderCountry.countryCode]"
+          (click)="onClickBorderCountry(borderCountry.countryCode)"
         >
           <span *ngIf="borderCountry.getCountryName | async as countryName; else loading">
             {{ countryName }}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CountryService } from '@core/http/country.service';
 import { Country } from '@core/models/country';
 import { Observable } from 'rxjs';
@@ -14,12 +14,28 @@ export class CountryDetailsComponent implements OnInit {
   borderCountries?: { countryCode: string; getCountryName: Observable<string> }[] = [];
   country?: Country;
 
-  constructor(private countryService: CountryService, private route: ActivatedRoute) {}
+  constructor(
+    private countryService: CountryService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
+    this.getCountryDetails();
+  }
+
+  onClickBorderCountry(countryCode: string): void {
+    this.country = undefined;
+    this.router.navigate(['/countries', countryCode]).then(() => {
+      this.getCountryDetails();
+    });
+  }
+
+  private getCountryDetails(): void {
     const countryCode = this.route.snapshot.params.countryCode;
     this.countryService.getCountryByCode(countryCode).subscribe((country) => {
       this.country = country;
+      this.borderCountries = [];
       this.country.borders.forEach((countryCode) => {
         this.borderCountries?.push({
           countryCode,

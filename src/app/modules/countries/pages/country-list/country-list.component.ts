@@ -34,7 +34,7 @@ export class CountryListComponent implements OnInit, OnDestroy {
     this.unsubscribe.unsubscribe();
   }
 
-  private initCountryFilterForm() {
+  private initCountryFilterForm(): void {
     this.countryFilterForm = new FormGroup({
       countryName: new FormControl(null),
       region: new FormControl(null),
@@ -53,7 +53,7 @@ export class CountryListComponent implements OnInit, OnDestroy {
       .subscribe((val) => this.filterCountryList());
   }
 
-  private filterCountryList() {
+  private filterCountryList(): void {
     let filteredCountries = this.completeCountryList;
     const formVal = this.countryFilterForm.value;
 
@@ -80,7 +80,7 @@ export class CountryListComponent implements OnInit, OnDestroy {
     this.countryList = filteredCountries;
   }
 
-  private initRegionFilterItems() {
+  private initRegionFilterItems(): void {
     const excludedRegions = ['Empty', 'Polar'];
     const regionKeys = Object.keys(Region) as (keyof typeof Region)[];
     regionKeys.forEach((key) => {
