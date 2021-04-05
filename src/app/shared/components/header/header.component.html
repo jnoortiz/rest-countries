@@ -1,9 +1,13 @@
 <header>
   <div class="container">
     <h2 class="header-title">Where in the world?</h2>
-    <button class="dark-mode-button">
+    <button class="dark-mode-button" (click)="onClickDarkModeToggle()">
       <!-- <i class="dark-mode-button-icon icon-moon-inv"></i> -->
-      <i class="dark-mode-button-icon icon-moon"></i>Dark Mode
+      <i
+        class="dark-mode-button-icon icon-moon"
+        [ngClass]="{ 'icon-moon': !darkMode, 'icon-moon-inv': darkMode }"
+      ></i
+      >Dark Mode
     </button>
   </div>
 </header>

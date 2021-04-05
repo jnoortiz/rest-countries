@@ -13,6 +13,7 @@ export class CountryService {
   getCountryByCode(code: string): Observable<Country> {
     return this.http.get(`${environment.countriesApiUrl}/alpha/${code}`) as Observable<Country>;
   }
+
   getCountryList(): Observable<Country[]> {
     return this.http.get(`${environment.countriesApiUrl}/all`) as Observable<Country[]>;
   }
