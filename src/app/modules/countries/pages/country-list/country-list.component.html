@@ -1,11 +1,24 @@
 <!-- header -->
 <app-header></app-header>
 
-<!-- country name filter -->
-<div class="country-name-filter"></div>
+<!-- filters -->
+<div class="container">
+  <!-- country name filter -->
+  <div class="country-name-filter">
+    <i class="country-name-filter-icon icon-search"></i>
+    <input class="country-name-input-filter" placeholder="Search for a country..." />
+  </div>
 
-<!-- region filter -->
-<div class="region-filter"></div>
+  <!-- region filter -->
+  <div class="region-filter">
+    <ng-select
+      class="region-filter-select"
+      [items]="regionOptions"
+      placeholder="Filter by Region"
+      [searchable]="false"
+    ></ng-select>
+  </div>
+</div>
 
 <!-- country cards -->
 <ul class="country-list container">

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { HeaderComponent } from './components/header/header.component';
 const components = [HeaderComponent];
@@ -11,6 +12,6 @@ const pipes = [NameObjJoinPipe, JoinPipe];
 @NgModule({
   declarations: [...components, ...pipes],
   imports: [CommonModule],
-  exports: [CommonModule, ...components, ...pipes],
+  exports: [CommonModule, NgSelectModule, ...components, ...pipes],
 })
 export class SharedModule {}

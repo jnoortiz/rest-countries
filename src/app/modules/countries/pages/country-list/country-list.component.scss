@@ -1,4 +1,6 @@
 @import 'partials/_breakpoints';
+@import 'partials/_colors';
+@import 'partials/_variables';
 
 .country-list {
   text-align: center;
@@ -10,6 +12,52 @@
 .country-card-container {
   display: inline-block;
   margin: 15px;
+}
+
+.country-name-filter {
+  position: relative;
+  height: 50px;
+  display: inline-block;
+  width: 400px;
+}
+
+.country-name-input-filter {
+  padding: 15px 20px 15px 60px;
+  font-size: $countryDetailsFontSize;
+  border: none;
+  box-shadow: $boxShadow;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.country-name-filter-icon {
+  top: 11px;
+  left: 20px;
+  position: absolute;
+  font-size: 18px;
+  color: $darkGray;
+}
+
+.region-filter {
+  float: right;
+}
+
+:host ::ng-deep {
+  .ng-select.region-filter-select {
+    .ng-select-container {
+      height: 48px;
+      width: 220px;
+      border: 0;
+      box-shadow: $boxShadow;
+      padding-left: 10px;
+    }
+    .ng-option {
+      padding-left: 20px;
+    }
+    .scroll-host {
+      box-shadow: $boxShadow;
+    }
+  }
 }
 
 @media (min-width: $s) {
