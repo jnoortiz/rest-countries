@@ -1,0 +1,50 @@
+body.dark-mode {
+  background-color: $veryDarkBlue;
+  color: $white;
+
+  header {
+    background-color: $darkBlue;
+    color: $white;
+  }
+
+  .btn {
+    background-color: $darkBlue;
+    color: $white;
+  }
+
+  .dark-mode-button {
+    color: $white;
+  }
+
+  .country-card {
+    background-color: $darkBlue;
+  }
+
+  .country-name-input-filter {
+    background-color: $darkBlue;
+    color: $white;
+    &::placeholder {
+      color: rgba($white, 0.7);
+    }
+  }
+
+  .country-name-filter-icon {
+    color: $white;
+  }
+
+  .ng-select.region-filter-select {
+    .ng-select-container {
+      background-color: $darkBlue;
+      color: $white;
+    }
+
+    .ng-placeholder {
+      color: rgba($white, 0.7);
+    }
+
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+      background-color: $darkBlue;
+      color: $white;
+    }
+  }
+}

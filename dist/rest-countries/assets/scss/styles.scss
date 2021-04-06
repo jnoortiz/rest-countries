@@ -1,0 +1,50 @@
+@import 'partials/_breakpoints';
+@import 'partials/_colors';
+@import 'partials/_fonts';
+@import 'themes/dark-mode';
+
+label {
+  display: inline-block;
+  padding-bottom: 0;
+  padding-top: 0;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+body {
+  background-color: $veryLightGray;
+  font-weight: 300;
+  margin: 0;
+  font-family: $nunitoSans;
+  color: $veryVeryDarkBlue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+@media (min-width: $md) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $l) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $lg) {
+  .container {
+    padding: 0 50px;
+  }
+}
